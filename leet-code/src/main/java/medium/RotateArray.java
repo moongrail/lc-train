@@ -5,10 +5,12 @@ import java.util.Arrays;
 public class RotateArray {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7};
-        rotate(array, 3);
+        rotate2(array, 3);
     }
 
     public static void rotate2(int[] nums, int k) {
+        if (nums.length < 2) return;
+
         int indexRotate = 0;
         for (int i = nums.length - k; i < nums.length; i++) {
             int temp = nums[i];
